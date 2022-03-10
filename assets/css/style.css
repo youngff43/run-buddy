@@ -11,9 +11,12 @@ body {
 }
 
 /* apply styles to <header> */
-header{
+header {
     padding: 20px 35px;
     background-color: #39a6b2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header h1 {
@@ -21,7 +24,6 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0;
-    display: inline;
 }
 
 header a {
@@ -30,35 +32,39 @@ header a {
 }
 
 header nav {
-    float: right;
     margin: 7px 0;
 }
 
-header nav ul li {
-    display: inline;
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.55vw;
 }
 
 footer {
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer h2 {
-    display: inline;
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
 
 footer div {
-    float: right;
     line-height: 1.5;
     text-align: right;
 }
@@ -74,10 +80,11 @@ section {
 /* Hero Style Start */
 .hero {
     background-image: url("../images/hero-bg.jpg");
-    height: 600px;
     background-size: cover;
     background-position: center;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 /* Hero Style End */
 
@@ -85,11 +92,9 @@ section {
     border: solid 3px #024e76;
     background-color: #fce138;
     padding: 20px;
-    width: 500px;
     color: #024e76;
-    position: absolute;
-    bottom: 120px;
-    right: 140px;
+    width: 40%;
+    margin: 3.5%;
 }
 
 .hero-form h3 {
@@ -123,8 +128,19 @@ section {
     font-size: 16px;
 }
 
-.intro {
-    text-align: center;
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.hero-cta h2 {
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138
 }
 
 .intro p {
@@ -133,44 +149,74 @@ section {
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
+    text-align: center;
   }
 
 .steps div {
-    margin-bottom: 80px;
 }
 
 .steps {
-    text-align: center;
     background: #fce138;
 }
 
-.steps img {
-    width: 15%;
-    margin: 10px 0;
+.step-img {
+    flex: 1 12%;
+    margin-right: 20px;
   }
 
-.steps h3 {
+.step-img img {
+    max-width: 100%;
+  }
+
+.step h3 {
     color: #024e76;
     font-size: 46px;
-    margin-top: 10px;
+    flex: 1 30%;
   }
 
-.steps p {
+.step-text p {
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px;
+  }
+
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
   }
 
 .steps span {
-    font-size: 38px;
 }
+
+.step-info {
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.step-text {
+    flex: 12;
+}
+.step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 
 .section-title {
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    display: inline-block;
     border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
   }
 
 .primary-border {
@@ -182,26 +228,27 @@ section {
   }
 
 .trainers {
-      text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
 .trainer {
-      width: 900px;
-      margin: 0 auto 30px auto;
+      margin: 20px;
       background: #024e76;
       color: #fce138;
-      overflow:auto;
+      flex: 1;
   }
 
 .trainer img {
-      width: 35%;
-      float: left;
+      width: 100%;
   }
 
 .trainer-bio {
-      padding: 35px;
-      float: left;
-      width: 65%;
+      padding: 25px;
+      line-height: 1.3;
   }
 
 .text-left {
@@ -212,30 +259,26 @@ section {
       text-align: right;
   }
 
+.flex-row {
+    display: flex;
+}
+
 .trainer-bio h3 {
-      font-size: 32px;
-      margin-bottom: 8px;
+      font-size: 28px;
   }
 
 .trainer-bio h4 {
       font-weight: lighter;
-      font-size: 26px;
-      margin-bottom: 25px;
+      font-size: 22px;
+      margin-bottom: 15px;
   }
 
 .trainer-bio p {
       font-size: 17px;
-      line-height: 1.3;
-  }
-
-.contact {
-      background: #024e76;
-      text-align: center;
   }
 
 /* REACH OUT STYLES START */
 .contact {
-      text-align: center;
       background: #024e76;
   }
 
@@ -243,34 +286,59 @@ section {
       color: #fce138;
   }
 
-  .contact-info iframe {
-      width: 400px;
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info > * {
+    flex: 1;
+    margin: 15px;
+}
+
+.contact-info iframe {
       height: 400px;
   }
 
-  .contact-info div {
-      width: 410px;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      margin: 30px 0 0 60px;
+.contact-info div {
       color: white;
   }
   
-  .contact-info h3 {
+.contact-info h3 {
     color: #fce138;
     font-size: 32px;
   }
   
-  .contact-info p,
-  .contact-info address {
+.contact-info p,
+.contact-info address {
     margin: 20px 0;
     line-height: 1.5;
     font-size: 20px;
     font-style: normal;
   }
   
-  .contact-info a {
+.contact-info a {
     color: #fce138;
   }
+
+.contact-form input, .contact-form textarea {
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    background: #fce138;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+}
   /* REACH OUT STYLES END */
